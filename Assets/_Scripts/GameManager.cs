@@ -28,8 +28,11 @@ public class GameManager : MonoBehaviour
     [Header("Stage 1 Variables")]
     public List<GameObject> _fireObject;
 
+    [Header("Questions")]
+    public List<GameObject> questionsUI = new List<GameObject>();
 
-	void Start()
+
+    void Start()
 	{
 		FadeOut.SetActive(false);
 		playerMovement = false;
@@ -106,7 +109,23 @@ public class GameManager : MonoBehaviour
 
     }
 
-	IEnumerator GameFlow()
+    #region Questions
+
+
+    public void CorrectAnswer()
+    {
+
+    }
+
+    public void WrongAnswer()
+    {
+
+    }
+
+    #endregion
+
+
+    IEnumerator GameFlow()
 	{
         //function UIs
         //Start fire
@@ -133,6 +152,7 @@ public class GameManager : MonoBehaviour
             //time
 			yield return null;
 	}
+
 
 
 	
