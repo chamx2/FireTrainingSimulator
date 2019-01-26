@@ -1,0 +1,419 @@
+fileFormatVersion: 2
+guid: be5626b3f3f3ab24d9668eab91c27d1c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bin.001
+    100002: Books
+    100004: Books.001
+    100006: Carpet
+    100008: Chair
+    100010: Chair.001
+    100012: Chair.002
+    100014: Chairboss
+    100016: Clock
+    100018: Coat rack
+    100020: Desk
+    100022: Door
+    100024: Fire ext box
+    100026: FireExt.
+    100028: FireExt..001
+    100030: //RootNode
+    100032: Keyboard
+    100034: light
+    100036: light.001
+    100038: light.002
+    100040: Monitor
+    100042: Mouse
+    100044: Mug
+    100046: Office
+    100048: Office.001
+    100050: Paper Stack
+    100052: Paper Stack.001
+    100054: Plant
+    100056: Plant.001
+    100058: Shelf
+    100060: Shelf.001
+    100062: Shelf.002
+    100064: SlidingDoor.001
+    100066: Small Chair
+    100068: Small Chair.001
+    100070: Small Chair.002
+    100072: Table
+    400000: Bin.001
+    400002: Books
+    400004: Books.001
+    400006: Carpet
+    400008: Chair
+    400010: Chair.001
+    400012: Chair.002
+    400014: Chairboss
+    400016: Clock
+    400018: Coat rack
+    400020: Desk
+    400022: Door
+    400024: Fire ext box
+    400026: FireExt.
+    400028: FireExt..001
+    400030: //RootNode
+    400032: Keyboard
+    400034: light
+    400036: light.001
+    400038: light.002
+    400040: Monitor
+    400042: Mouse
+    400044: Mug
+    400046: Office
+    400048: Office.001
+    400050: Paper Stack
+    400052: Paper Stack.001
+    400054: Plant
+    400056: Plant.001
+    400058: Shelf
+    400060: Shelf.001
+    400062: Shelf.002
+    400064: SlidingDoor.001
+    400066: Small Chair
+    400068: Small Chair.001
+    400070: Small Chair.002
+    400072: Table
+    2100000: Chair
+    2100002: Door
+    2100004: Fire ext
+    2100006: Fire ext box
+    2100008: Shelf
+    2100010: No Name
+    2100012: Doors
+    2100014: light
+    2100016: Chair.001
+    2100018: Books.001
+    2100020: Stack
+    2100022: plant
+    2100024: Carpet
+    2100026: Bin
+    2100028: Table
+    2100030: Office
+    2100032: Coat rack
+    2100034: Monitor
+    2100036: ChairBoss
+    2100038: Desk
+    2100040: Clock
+    2100042: Keyboard
+    2100044: Mouse
+    2100046: Books
+    2100048: Mug
+    2300000: Bin.001
+    2300002: Books
+    2300004: Books.001
+    2300006: Carpet
+    2300008: Chair
+    2300010: Chair.001
+    2300012: Chair.002
+    2300014: Chairboss
+    2300016: Clock
+    2300018: Coat rack
+    2300020: Desk
+    2300022: Door
+    2300024: Fire ext box
+    2300026: FireExt.
+    2300028: FireExt..001
+    2300030: Keyboard
+    2300032: light
+    2300034: light.001
+    2300036: light.002
+    2300038: Monitor
+    2300040: Mouse
+    2300042: Mug
+    2300044: Office
+    2300046: Office.001
+    2300048: Paper Stack
+    2300050: Paper Stack.001
+    2300052: Plant
+    2300054: Plant.001
+    2300056: Shelf
+    2300058: Shelf.001
+    2300060: Shelf.002
+    2300062: SlidingDoor.001
+    2300064: Small Chair
+    2300066: Small Chair.001
+    2300068: Small Chair.002
+    2300070: Table
+    3300000: Bin.001
+    3300002: Books
+    3300004: Books.001
+    3300006: Carpet
+    3300008: Chair
+    3300010: Chair.001
+    3300012: Chair.002
+    3300014: Chairboss
+    3300016: Clock
+    3300018: Coat rack
+    3300020: Desk
+    3300022: Door
+    3300024: Fire ext box
+    3300026: FireExt.
+    3300028: FireExt..001
+    3300030: Keyboard
+    3300032: light
+    3300034: light.001
+    3300036: light.002
+    3300038: Monitor
+    3300040: Mouse
+    3300042: Mug
+    3300044: Office
+    3300046: Office.001
+    3300048: Paper Stack
+    3300050: Paper Stack.001
+    3300052: Plant
+    3300054: Plant.001
+    3300056: Shelf
+    3300058: Shelf.001
+    3300060: Shelf.002
+    3300062: SlidingDoor.001
+    3300064: Small Chair
+    3300066: Small Chair.001
+    3300068: Small Chair.002
+    3300070: Table
+    4300000: Chair.002
+    4300002: Door
+    4300004: FireExt..001
+    4300006: Fire ext box
+    4300008: Shelf.002
+    4300010: Office.001
+    4300012: SlidingDoor.001
+    4300014: light
+    4300016: light.002
+    4300018: light.001
+    4300020: Small Chair.002
+    4300022: Small Chair.001
+    4300024: Books.001
+    4300026: Paper Stack.001
+    4300028: Plant
+    4300030: Carpet
+    4300032: Shelf.001
+    4300034: Chair.001
+    4300036: Bin.001
+    4300038: Table
+    4300040: Office
+    4300042: Plant.001
+    4300044: Coat rack
+    4300046: Monitor
+    4300048: FireExt.
+    4300050: Shelf
+    4300052: Chair
+    4300054: Chairboss
+    4300056: Desk
+    4300058: Clock
+    4300060: Keyboard
+    4300062: Mouse
+    4300064: Books
+    4300066: Mug
+    4300068: Paper Stack
+    4300070: Small Chair
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bin
+    second: {fileID: 2100000, guid: 9ebe1aa719d4c924fa1c0cc7a83549dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Books
+    second: {fileID: 2100000, guid: bce624f8879a4324885fa0ded2bcf2cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Books.001
+    second: {fileID: 2100000, guid: f794e952335fa9248aea2ca8fdd2e63f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carpet
+    second: {fileID: 2100000, guid: c3f46e375d4ba9046a8cf5975bc2a4dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair
+    second: {fileID: 2100000, guid: 4e05c02f3f08c2845b1db935c3898c11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair.001
+    second: {fileID: 2100000, guid: d17a9f075fb498347858c5c44e9204bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChairBoss
+    second: {fileID: 2100000, guid: adec4db4604120a488eea49dbd091ad9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clock
+    second: {fileID: 2100000, guid: a72b4b8ab75398f469115a5eb9b832bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coat rack
+    second: {fileID: 2100000, guid: e97c449c7d805bf469646ab4791f729d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Desk
+    second: {fileID: 2100000, guid: 084f35f927e5f124fbaac324618479bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: 2353131c714fbc045b7b7342c0d97b42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Doors
+    second: {fileID: 2100000, guid: 6ea482be602849b47aaec1431d3cf9b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fire ext
+    second: {fileID: 2100000, guid: 04ca04d852bcead4782406c1575acf79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fire ext box
+    second: {fileID: 2100000, guid: 236af4497daf7944587b291f9bff9bd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keyboard
+    second: {fileID: 2100000, guid: 707cee73b917bb94cb1014e96b9b0131, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monitor
+    second: {fileID: 2100000, guid: 17627d1302e74364685cc73b77f5f8f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouse
+    second: {fileID: 2100000, guid: 459226deafe41e747a43e5f91a2852e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mug
+    second: {fileID: 2100000, guid: 8c85ee4efe7123e4e992f62f7558aad3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 025f13ca7237f954ea0057f85591b786, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Office
+    second: {fileID: 2100000, guid: e9624d730cef2ec439fa4fceb9522c65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shelf
+    second: {fileID: 2100000, guid: bb1dd138b65e51b4b99146641029572b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stack
+    second: {fileID: 2100000, guid: 6e481f9d714956d429a74c849eaa9498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table
+    second: {fileID: 2100000, guid: c9c8c296abf232341923eac09929367c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light
+    second: {fileID: 2100000, guid: 3918b74314c6d2b4fb4f383926db6a00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant
+    second: {fileID: 2100000, guid: 7ab3cfd1d305d00409b920a8ee279c28, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
