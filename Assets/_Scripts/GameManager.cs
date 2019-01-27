@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
     [Header("Questions")]
     public List<GameObject> questionsUI = new List<GameObject>();
 
+    [Header("Triggers")]
+
+    public List<GameObject> triggerQuestions;
+
+   
 
     void Start()
 	{
@@ -124,6 +129,15 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+
+    //#region Colliders 
+
+    //public void OnTriggerEnter(Collider _first)
+    //{
+    //    questionsUI[0].SetActive(true);
+    //}
+
+    //#endregion
 
     IEnumerator GameFlow()
 	{
