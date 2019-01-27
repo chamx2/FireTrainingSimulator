@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> triggerQuestions;
 
-   
 
     void Start()
 	{
@@ -69,6 +68,7 @@ public class GameManager : MonoBehaviour
         _welcomeUI.SetActive(true);
         _uiBg.SetActive(true);
         _nxtBtn.SetActive(true);
+
         //_vrWalkController.playerMovement = true;
     }
 
@@ -106,13 +106,32 @@ public class GameManager : MonoBehaviour
 
         if (_uiNum >= 5)
         {
-            _vrWalkController.playerMovement = true;
+            EnablePlayerWalk();
             _uiNum = _gameUIs.Count;
-            Debug.Log("WALK READY");
             simulationStarted = true;
         }
 
     }
+
+    #region WalkController
+
+    public void EnablePlayerWalk()
+    {
+        Debug.Log("Enable Walking");
+        _vrWalkController.playerMovement = true;
+        _vrWalkController._triggerEnter = false;
+    }
+
+    public void DisablePlayerWalk()
+    {
+        Debug.Log("Disable Walking");
+        _vrWalkController.playerMovement = false;
+
+    }
+
+
+
+    #endregion
 
     #region Questions
 
@@ -130,41 +149,40 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
-    //#region Colliders 
-
-    //public void OnTriggerEnter(Collider _first)
-    //{
-    //    questionsUI[0].SetActive(true);
-    //}
-
-    //#endregion
-
     IEnumerator GameFlow()
 	{
         //function UIs
         //Start fire
         //wait for 5 seconds
-        yield return new WaitForSeconds(5);
-        Debug.Log("Open Fire");
-        _fireObject[0].SetActive(true);
-        //open QA for level 1
+        yield return new WaitForSeconds(3);
+        //Debug.Log("Game Flow Started");
+        //_fireObject[0].SetActive(true);
 
-            //UI level 2 start
-            //start level 2 
-            //find fire alarm and press
-            //start sound alarm
-            //UI level 2 finish
-            //UI level 3 start
-            //find fire extinguisher start
-            //UI fire extinguisher end
-            //UI level 3 end
-            //UI level 4 start
-            // go back to fire start
-            //use fire extinguisher
-            //UI level 4 end
-            //congratulations
-            //time
-			yield return null;
+
+        //open QA for level 1
+        if (_vrWalkController._triggerEnter)
+        {
+            //    Debug.Log("UI Level 2 Start");
+            DisablePlayerWalk();
+        }
+
+        yield return new WaitForEndOfFrame();
+        //UI level 2 start
+        //start level 2 
+        //find fire alarm and press
+        //start sound alarm
+        //UI level 2 finish
+        //UI level 3 start
+        //find fire extinguisher start
+        //UI fire extinguisher end
+        //UI level 3 end
+        //UI level 4 start
+        // go back to fire start
+        //use fire extinguisher
+        //UI level 4 end
+        //congratulations
+        //time
+        yield return null;
 	}
 
 

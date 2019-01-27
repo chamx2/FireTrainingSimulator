@@ -11,4 +11,8 @@ public class ActivateQuestions : MonoBehaviour
         _questionUI.SetActive(true);
     }
 
+    public void DestroyTrigger()
+    {
+        Destroy(this.gameObject);
+    }
 }

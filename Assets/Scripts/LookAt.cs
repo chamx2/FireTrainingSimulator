@@ -15,6 +15,6 @@ public class LookAt : MonoBehaviour {
 	void Update () {
 
 		player = GameObject.FindGameObjectWithTag ("MainCamera").transform;
-		transform.LookAt (player);
+		transform.LookAt (2 * transform.position - player.position);
 	}
 }
