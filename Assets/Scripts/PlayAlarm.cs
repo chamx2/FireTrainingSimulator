@@ -13,17 +13,15 @@ public class PlayAlarm : MonoBehaviour
 
     private void OnMouseOver()
     {
-        _title.SetActive(true);
 
-        //if (Input.GetMouseButton(0))
-        //{
-        //    Debug.Log("Alarm Pressed");
-        //    _fireAlarm.Play();
-        //    Destroy(_smokeEffect);
-        //    Destroy(_sparkEffect);
-        //    _notification.SetActive(true);
-        //    _fireEffect.SetActive(true);
-        //}
+        if (Input.GetMouseButton(0))
+        {
+            _fireAlarm.Play();
+            Destroy(_smokeEffect);
+            Destroy(_sparkEffect);
+            _notification.SetActive(true);
+            _fireEffect.SetActive(true);
+        }
 
     }
 
@@ -31,12 +29,5 @@ public class PlayAlarm : MonoBehaviour
     {
         _title.SetActive(false);
     }
-
-    public void PlayAlarmEffect()
-    {
-        Debug.Log("FireAlarmEffect");
-        _fireAlarm.Play();
-    }
-
   
 }

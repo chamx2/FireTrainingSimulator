@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
+
+    private static GameManager instance;
+
+    public static GameManager Instance { get { return instance; } }
+
     // public variables
     private bool simulationStarted;
 
@@ -35,6 +40,16 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> triggerQuestions;
 
+    [Header("Player Controls")]
+    public GameObject tempParent;
+    public Transform guide;
+    public GameObject currentItem;
+
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
 	{
@@ -144,6 +159,51 @@ public class GameManager : MonoBehaviour
     public void WrongAnswer()
     {
 
+    }
+
+    #endregion
+
+    #region Player controls
+    public void clickObject()
+    {
+        Debug.Log("Carrying the object");
+        currentItem.GetComponent<Rigidbody>().useGravity = false;
+        currentItem.GetComponent<Rigidbody>().isKinematic = true;
+        currentItem.transform.position = guide.transform.position;
+        //items.transform.rotation = guide.transform.rotation;
+        currentItem.transform.parent = tempParent.transform;
+    }
+
+    public void letGoObject()
+    {
+        Debug.Log("Object released!");
+        currentItem.GetComponent<Rigidbody>().useGravity = true;
+        currentItem.GetComponent<Rigidbody>().isKinematic = false;
+        currentItem.transform.parent = null;
+        //items.transform.rotation = guide.transform.rotation;
+        currentItem.transform.position = guide.transform.position;
+    }
+    #endregion
+
+    #region Data Reference
+    public void SetCurrentTrashItem(GameObject tempItem)
+    {
+        currentItem = tempItem;
+    }
+
+    public Transform GetGuide()
+    {
+        return guide;
+    }
+
+    public GameObject GetTempParent()
+    {
+        return tempParent;
+    }
+
+    public GameObject GetCurrentTrashItem()
+    {
+        return currentItem;
     }
 
     #endregion
