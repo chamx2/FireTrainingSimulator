@@ -3,44 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneSwticher : MonoBehaviour {
+public class SceneSwticher : MonoBehaviour
+{
 
 	public GameObject FadeOut;
 	// public GameObject gameObject;
 	public int sceneIndex;
 
-	// Use this for initialization
-	void Start () {
-
-		FadeOut.SetActive (false);
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void OnTriggerEnter (Collider other) {
 
-		if (other.gameObject.tag == "Player") {
+        //if (other.gameObject.tag == "Player") 
+        //{
 
-			StartCoroutine (SceneSwitch ());
+        //	StartCoroutine (SceneSwitch ());
 
-		}
+        //}
+        StartCoroutine(SceneSwitch());
 
+    }
 
-	}
+	IEnumerator SceneSwitch ()
+    {
 
-	IEnumerator SceneSwitch () {
+        FadeOut.SetActive(true);
+        yield return new WaitForSeconds(3);
 
-		FadeOut.SetActive (true);
-		yield return new WaitForSeconds (3);
-		// DontDestroyOnLoad(transform.gameObject);
-		SceneManager.LoadScene (sceneIndex);
-	}
+        //DontDestroyOnLoad(transform.gameObject);
 
-	public void SceneSwitchButton () {
+        AsyncOperation loadingScene = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while (!loadingScene.isDone)
+        {
+            Debug.Log("Progress: " + loadingScene.progress); // incase for progress bars
+            yield return null;
+        }
+    }
+
+	public void SceneSwitchButton ()
+    {
 
 		StartCoroutine (SceneSwitch ());
 	}
