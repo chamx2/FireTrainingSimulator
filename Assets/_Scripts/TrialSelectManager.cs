@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAt : MonoBehaviour {
+public class TrialSelectManager : MonoBehaviour {
 
-
-	Transform player;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,8 +11,6 @@ public class LookAt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		player = GameObject.FindGameObjectWithTag ("MainCamera").transform;
-		transform.LookAt (player);
+		
 	}
 }
