@@ -37,13 +37,22 @@ public class GameManager : MonoBehaviour
     public List<GameObject> questionsUI = new List<GameObject>();
 
     [Header("Triggers")]
-
     public List<GameObject> triggerQuestions;
+
+    [Header("Audio")]
+    public AudioSource fireAlarm;
 
     [Header("Player Controls")]
     public GameObject tempParent;
     public Transform guide;
     public GameObject currentItem;
+
+    [Header("Other effects")]
+    public GameObject smokeEffect;
+
+    [Header("Trial 1")]
+    public List<GameObject> explosionEffects;
+    public List<GameObject> fireParticles;
 
 
     void Awake()
@@ -161,6 +170,34 @@ public class GameManager : MonoBehaviour
 
     }
 
+    #endregion
+
+    #region Trial Effect Controller
+
+    public void SmokeEffect()
+    {
+        smokeEffect.SetActive(true);
+    }
+
+    public void ActivateAlarm()
+    {
+        fireAlarm.Play();
+    }
+
+    public void TrialOneActivate()
+    {
+
+
+        for(int i=0; i<=explosionEffects.Count; i++)
+        {
+            explosionEffects[i].SetActive(true);
+        }
+
+        for(int x=0; x<=fireParticles.Count; x++)
+        {
+            fireParticles[x].SetActive(true);
+        }
+    }
     #endregion
 
     #region Player controls
