@@ -28,10 +28,9 @@ public class GameManager : MonoBehaviour
     public GameObject _nxtBtn;
     public GameObject _playerUI;
     private int _uiNum = 0;
-
+    public GameObject trialOneEndUI;
     //STAGE 1 OBJECTS
-    [Header("Stage 1 Variables")]
-    public List<GameObject> _fireObject;
+
 
     [Header("Questions")]
     public List<GameObject> questionsUI = new List<GameObject>();
@@ -47,13 +46,11 @@ public class GameManager : MonoBehaviour
     public Transform guide;
     public GameObject currentItem;
 
-    [Header("Other effects")]
-    public GameObject smokeEffect;
-
-    [Header("Trial 1")]
+    [Header("Effects")]
     public List<GameObject> explosionEffects;
     public List<GameObject> fireParticles;
-    public GameObject trialOneEndUI;
+    public GameObject smokeEffect;
+    public GameObject sparkEffect;
 
 
     void Awake()
@@ -209,6 +206,32 @@ public class GameManager : MonoBehaviour
         fireAlarm.Play();
     }
 
+    public void ActivateExplosions()
+    {
+        for (int i = 0; i <= explosionEffects.Count; i++)
+        {
+            explosionEffects[i].SetActive(true);
+        }
+    }
+
+    public void ActivateFireParticles()
+    {
+        for (int x = 0; x <= fireParticles.Count; x++)
+        {
+            fireParticles[x].SetActive(true);
+        }
+    }
+
+    public GameObject SparkEffectGameObject()
+    {
+        return sparkEffect;
+    }
+
+    public GameObject SmokeEffectGameObject()
+    {
+        return smokeEffect;
+    }
+
     public void TrialOneActivate()
     {
 
@@ -239,6 +262,8 @@ public class GameManager : MonoBehaviour
 
 
     }
+
+    
     #endregion
 
     #region Player controls
