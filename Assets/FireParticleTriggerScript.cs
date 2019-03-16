@@ -8,6 +8,7 @@ public class FireParticleTriggerScript : MonoBehaviour {
     {
         GameManager.Instance.SmokeEffectGameObject().SetActive(false);
         GameManager.Instance.ActivateFireParticles();
-
+        GameManager.Instance.DisablePlayerWalk();
+        GameManager.Instance.RunWarningMessage().SetActive(true);
     }
 }

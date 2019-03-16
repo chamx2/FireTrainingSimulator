@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
     public GameObject _nxtBtn;
     public GameObject _playerUI;
     private int _uiNum = 0;
-    public GameObject trialOneEndUI;
+    public GameObject endTrialUI;
+    public GameObject runNoticeUI;
     //STAGE 1 OBJECTS
 
 
@@ -38,8 +39,10 @@ public class GameManager : MonoBehaviour
     [Header("Triggers")]
     public List<GameObject> triggerQuestions;
 
-    [Header("Audio")]
+    [Header("Audios")]
     public AudioSource fireAlarm;
+    public AudioSource explosionSound;
+    public AudioSource burningSound;
 
     [Header("Player Controls")]
     public GameObject tempParent;
@@ -83,8 +86,6 @@ public class GameManager : MonoBehaviour
 		//	StartCoroutine(GameFlow());
 		//}
 	}
-
-
 
 	public void GameStart()
 	{
@@ -179,6 +180,19 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    #region User Interface
+
+    public GameObject EndTrialMessage()
+    {
+        return endTrialUI;
+    }
+
+    public GameObject RunWarningMessage()
+    {
+        return runNoticeUI;
+    }
+    #endregion
+
     #region Questions
 
 
@@ -194,11 +208,16 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    #region Trial Effect Controller
-
-    public void SmokeEffect()
+    #region Sound Effect Reference
+    
+    public void PlayExplosionSoundEffect()
     {
-        smokeEffect.SetActive(true);
+        explosionSound.Play();
+    }
+    
+    public void PlayBurningSoundEffect()
+    {
+        burningSound.Play();
     }
 
     public void ActivateAlarm()
@@ -206,8 +225,18 @@ public class GameManager : MonoBehaviour
         fireAlarm.Play();
     }
 
+    #endregion
+
+    #region Trial Effect Controller
+
+    public void SmokeEffect()
+    {
+        smokeEffect.SetActive(true);
+    }
+
     public void ActivateExplosions()
     {
+        PlayExplosionSoundEffect();
         for (int i = 0; i <= explosionEffects.Count; i++)
         {
             explosionEffects[i].SetActive(true);
@@ -220,6 +249,7 @@ public class GameManager : MonoBehaviour
         {
             fireParticles[x].SetActive(true);
         }
+        PlayBurningSoundEffect();
     }
 
     public GameObject SparkEffectGameObject()
@@ -258,7 +288,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         DisablePlayerWalk();
-        trialOneEndUI.SetActive(true);
+        endTrialUI.SetActive(true);
 
 
     }
