@@ -18,7 +18,7 @@ public class DragItem : MonoBehaviour {
     void OnMouseUp()
     {
         //Debug.Log("Letting Go of the object");
-        GameManager.Instance.letGoObject();
+        //GameManager.Instance.letGoObject();
     }
 
 }

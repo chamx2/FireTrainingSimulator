@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour
     [Header("Triggers")]
     public List<GameObject> triggerQuestions;
 
+    [Header("Trigger Areas")]
+    public List<GameObject> triggerAreas;
+
     [Header("Audios")]
     public AudioSource fireAlarm;
     public AudioSource explosionSound;
@@ -49,12 +52,15 @@ public class GameManager : MonoBehaviour
     public Transform guide;
     public GameObject currentItem;
 
+    [Header("Items")]
+    public GameObject fireExtinguisher;
+
     [Header("Effects")]
     public List<GameObject> explosionEffects;
     public List<GameObject> fireParticles;
     public GameObject smokeEffect;
     public GameObject sparkEffect;
-
+    public GameObject extinguisherEffect;
 
     void Awake()
     {
@@ -86,6 +92,7 @@ public class GameManager : MonoBehaviour
 		//	StartCoroutine(GameFlow());
 		//}
 	}
+
 
 	public void GameStart()
 	{
@@ -158,6 +165,14 @@ public class GameManager : MonoBehaviour
             simulationStarted = true;
         }
 
+    }
+
+    void DestroyAllTriggers()
+    {
+        for (int i = 0; i <= triggerAreas.Count; i++)
+        {
+            Destroy(triggerAreas[i]);
+        }
     }
 
     #region WalkController
@@ -262,6 +277,11 @@ public class GameManager : MonoBehaviour
         return smokeEffect;
     }
 
+    public GameObject ExtinguisherEffectGameObject()
+    {
+        return extinguisherEffect;
+    }
+
     public void TrialOneActivate()
     {
 
@@ -276,24 +296,9 @@ public class GameManager : MonoBehaviour
             fireParticles[x].SetActive(true);
         }
     }
-
-    public void TrialOneEnd()
-    {
-        StartCoroutine(TrialOneEndFlow());
-    }
-
-    IEnumerator TrialOneEndFlow()
-    {
-        ActivateAlarm();
-        yield return new WaitForSeconds(2);
-
-        DisablePlayerWalk();
-        endTrialUI.SetActive(true);
+   
 
 
-    }
-
-    
     #endregion
 
     #region Player controls
@@ -341,46 +346,91 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    #region Trial One
+    public void TrialOneEnd()
+    {
+        StartCoroutine(TrialOneEndFlow());
+    }
+
+    IEnumerator TrialOneEndFlow()
+    {
+        ActivateAlarm();
+        yield return new WaitForSeconds(2);
+
+        DisablePlayerWalk();
+        endTrialUI.SetActive(true);
+    }
+    #endregion
+
+    #region Trial Three Flow
+
+    public void TrialThreeFlow()
+    {
+        StartCoroutine(StartTrialThreeFlow());
+    }
+
+    IEnumerator StartTrialThreeFlow()
+    {
+
+        yield return new WaitForSeconds(7);
+        
+        for(int x = 0; x<= fireParticles.Count; x++)
+        {
+            fireParticles[x].SetActive(false);
+            yield return new WaitForSeconds(1);
+        }
+
+
+        EndTrialMessage().SetActive(true);
+        yield return new WaitForSeconds(2);
+        DisablePlayerWalk();
+        //EnablePlayerWalk();
 
 
 
- //   IEnumerator GameFlow()
-	//{
- //       //function UIs
- //       //Start fire
- //       //wait for 5 seconds
- //       yield return new WaitForSeconds(3);
- //       //Debug.Log("Game Flow Started");
- //       //_fireObject[0].SetActive(true);
+    }
 
-
- //       //open QA for level 1
- //       if (_vrWalkController._triggerEnter)
- //       {
- //           //    Debug.Log("UI Level 2 Start");
- //           DisablePlayerWalk();
- //       }
-
- //       yield return new WaitForEndOfFrame();
- //       //UI level 2 start
- //       //start level 2 
- //       //find fire alarm and press
- //       //start sound alarm
- //       //UI level 2 finish
- //       //UI level 3 start
- //       //find fire extinguisher start
- //       //UI fire extinguisher end
- //       //UI level 3 end
- //       //UI level 4 start
- //       // go back to fire start
- //       //use fire extinguisher
- //       //UI level 4 end
- //       //congratulations
- //       //time
- //       yield return null;
-	//}
+    #endregion
 
 
 
-	
+    //   IEnumerator GameFlow()
+    //{
+    //       //function UIs
+    //       //Start fire
+    //       //wait for 5 seconds
+    //       yield return new WaitForSeconds(3);
+    //       //Debug.Log("Game Flow Started");
+    //       //_fireObject[0].SetActive(true);
+
+
+    //       //open QA for level 1
+    //       if (_vrWalkController._triggerEnter)
+    //       {
+    //           //    Debug.Log("UI Level 2 Start");
+    //           DisablePlayerWalk();
+    //       }
+
+    //       yield return new WaitForEndOfFrame();
+    //       //UI level 2 start
+    //       //start level 2 
+    //       //find fire alarm and press
+    //       //start sound alarm
+    //       //UI level 2 finish
+    //       //UI level 3 start
+    //       //find fire extinguisher start
+    //       //UI fire extinguisher end
+    //       //UI level 3 end
+    //       //UI level 4 start
+    //       // go back to fire start
+    //       //use fire extinguisher
+    //       //UI level 4 end
+    //       //congratulations
+    //       //time
+    //       yield return null;
+    //}
+
+
+
+
 }

@@ -39,6 +39,9 @@ public class VRWalkController : MonoBehaviour
                 }
 
             }
+
+        
+
     }
 
     public void OnTriggerEnter(Collider other)
