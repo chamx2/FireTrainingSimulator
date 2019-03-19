@@ -10,7 +10,7 @@ public class ActivateQuestions : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _questionUI.SetActive(true);
-        //GameManager.Instance.DisablePlayerWalk();
+        GameManager.Instance.DisablePlayerWalk();
         //_smokeEffect.SetActive(true);
     }
 

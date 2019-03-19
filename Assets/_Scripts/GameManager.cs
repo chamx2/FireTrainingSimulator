@@ -370,16 +370,14 @@ public class GameManager : MonoBehaviour
     #region Trial One
     public void TrialOneEnd()
     {
-        Debug.Log("Pressed the Alarm!");
         StartCoroutine(TrialOneEndFlow());
     }
 
     IEnumerator TrialOneEndFlow()
     {
         ActivateAlarm();
-        yield return new WaitForSeconds(2);
-
         DisablePlayerWalk();
+        yield return new WaitForSeconds(2);
         endTrialUI.SetActive(true);
     }
     #endregion

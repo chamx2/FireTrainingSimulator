@@ -18,6 +18,11 @@ public class PlayAlarm : MonoBehaviour
 
     }
 
+    private void OnMouseDown()
+    {
+        PlayFireAlarm();
+    }
+
     private void OnMouseExit()
     {
         _title.SetActive(false);
@@ -25,8 +30,9 @@ public class PlayAlarm : MonoBehaviour
 
     public void PlayFireAlarm()
     {
-        Debug.Log("Fire!!");
-        _fireAlarm.Play();
+        //Debug.Log("Fire!!");
+        //_fireAlarm.Play();
+        GameManager.Instance.TrialOneEnd();
     }
   
 }
