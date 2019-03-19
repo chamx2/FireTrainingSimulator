@@ -1046,7 +1046,23 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114784759106409290, guid: dceb5cb3e2006e844a77d4748c843f4f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dceb5cb3e2006e844a77d4748c843f4f, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1517227414 stripped
@@ -1266,7 +1282,23 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114784759106409290, guid: dceb5cb3e2006e844a77d4748c843f4f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dceb5cb3e2006e844a77d4748c843f4f, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1759820562 stripped
@@ -1434,7 +1466,23 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114622770362751770, guid: dceb5cb3e2006e844a77d4748c843f4f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114784759106409290, guid: dceb5cb3e2006e844a77d4748c843f4f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dceb5cb3e2006e844a77d4748c843f4f, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2019033309 stripped
