@@ -57,7 +57,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Effects")]
     public List<GameObject> explosionEffects;
+    public GameObject explosionEffectsParent;
     public List<GameObject> fireParticles;
+    public GameObject fireEffectsParent;
     public GameObject smokeEffect;
     public GameObject sparkEffect;
     public GameObject extinguisherEffect;
@@ -252,19 +254,27 @@ public class GameManager : MonoBehaviour
     public void ActivateExplosions()
     {
         PlayExplosionSoundEffect();
-        for (int i = 0; i <= explosionEffects.Count; i++)
+        for (int i = 0; i <= explosionEffects.Count-1; i++)
         {
-            explosionEffects[i].SetActive(true);
+           
+            explosionEffects[i].SetActive(true);    
         }
+    }
+
+    public List<GameObject> AllExplosionEffects()
+    {
+        return explosionEffects;
     }
 
     public void ActivateFireParticles()
     {
-        for (int x = 0; x <= fireParticles.Count; x++)
+        PlayBurningSoundEffect();
+        for (int x = 0; x <= fireParticles.Count-1; x++)
         {
+            Debug.Log("Fire effect Activated " + fireParticles.Count);
             fireParticles[x].SetActive(true);
         }
-        PlayBurningSoundEffect();
+        
     }
 
     public GameObject SparkEffectGameObject()
@@ -280,6 +290,19 @@ public class GameManager : MonoBehaviour
     public GameObject ExtinguisherEffectGameObject()
     {
         return extinguisherEffect;
+    }
+
+    public void SimulateExplosionEffect()
+    {
+        StartCoroutine(SimulateExplosionEffectFlow());
+    }
+
+    IEnumerator SimulateExplosionEffectFlow()
+    {
+        Destroy(sparkEffect);
+        ActivateExplosions();
+        yield return new WaitForSeconds(2);
+        SmokeEffectGameObject().SetActive(true);
     }
 
     public void TrialOneActivate()

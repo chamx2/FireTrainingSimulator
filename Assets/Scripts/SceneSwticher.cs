@@ -7,7 +7,6 @@ public class SceneSwticher : MonoBehaviour
 {
 
 	public GameObject FadeOut;
-	// public GameObject gameObject;
 	public int sceneIndex;
 
 
@@ -20,14 +19,13 @@ public class SceneSwticher : MonoBehaviour
 
         //}
         StartCoroutine(SceneSwitch());
-
     }
 
 	IEnumerator SceneSwitch ()
     {
 
         FadeOut.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         //DontDestroyOnLoad(transform.gameObject);
 
@@ -42,7 +40,6 @@ public class SceneSwticher : MonoBehaviour
 
 	public void SceneSwitchButton ()
     {
-
 		StartCoroutine (SceneSwitch ());
 	}
 }

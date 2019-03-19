@@ -2285,7 +2285,7 @@ Prefab:
     - target: {fileID: 114486569759621416, guid: 84a98238048028041802dafe5d660fff,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224866899227871340, guid: 84a98238048028041802dafe5d660fff,
         type: 2}
@@ -2601,6 +2601,27 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114486569759621416, guid: 84a98238048028041802dafe5d660fff,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114486569759621416, guid: 84a98238048028041802dafe5d660fff,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114486569759621416, guid: 84a98238048028041802dafe5d660fff,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114486569759621416, guid: 84a98238048028041802dafe5d660fff,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 925725f3874344b42bf6285b201d486b,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84a98238048028041802dafe5d660fff, type: 2}
   m_IsPrefabParent: 0
@@ -3152,7 +3173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questionUI: {fileID: 66221872}
-  _smokeEffect: {fileID: 0}
 --- !u!23 &886851738
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3227,7 +3247,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 886851736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925725f3874344b42bf6285b201d486b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f3a295dfbce43144a54bbf99f052777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &957024678
@@ -6833,7 +6853,6 @@ GameObject:
   - component: {fileID: 1490930869}
   - component: {fileID: 1490930868}
   - component: {fileID: 1490930867}
-  - component: {fileID: 1490930871}
   m_Layer: 0
   m_Name: ExtinguisherArea
   m_TagString: Quiz1
@@ -6918,17 +6937,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1490930865}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1490930871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1490930865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f3a295dfbce43144a54bbf99f052777, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1506335830
 GameObject:
   m_ObjectHideFlags: 0
@@ -7636,7 +7644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1739343445
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7715,7 +7723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questionUI: {fileID: 2047972877}
-  _smokeEffect: {fileID: 0}
 --- !u!1 &1768639860 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
@@ -8441,6 +8448,7 @@ GameObject:
   - component: {fileID: 1943816462}
   - component: {fileID: 1943816464}
   - component: {fileID: 1943816463}
+  - component: {fileID: 1943816465}
   m_Layer: 0
   m_Name: FireExtinguisher
   m_TagString: Untagged
@@ -8544,6 +8552,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.38829958, y: 0.2420595, z: 0.9174092}
   m_Center: {x: 0.0152629465, y: 0.00000011920929, z: 0.45870447}
+--- !u!114 &1943816465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943816458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &1944065222
 GameObject:
   m_ObjectHideFlags: 0

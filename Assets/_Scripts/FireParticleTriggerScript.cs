@@ -6,7 +6,9 @@ public class FireParticleTriggerScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.Instance.SmokeEffectGameObject().SetActive(false);
+        Destroy(GameManager.Instance.SmokeEffectGameObject());
+        Destroy(GameManager.Instance.explosionEffectsParent);
+        //GameManager.Instance.SmokeEffectGameObject().SetActive(false);
         GameManager.Instance.ActivateFireParticles();
         GameManager.Instance.DisablePlayerWalk();
         GameManager.Instance.RunWarningMessage().SetActive(true);
