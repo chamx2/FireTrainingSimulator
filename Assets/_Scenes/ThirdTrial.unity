@@ -9050,7 +9050,8 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReturnToTrialSelection
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114581270495156854, guid: f95bb34847b03724c82e44e2fcaa4a72, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f95bb34847b03724c82e44e2fcaa4a72, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2049320277 stripped

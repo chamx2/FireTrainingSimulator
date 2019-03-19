@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
 
     public void GameUI()
 	{
-        //Debug.Log(_gameUIs.Count);
+
         _welcomeUI.SetActive(false);
         _gameUIs[_uiNum].SetActive(false);
         
@@ -144,21 +144,19 @@ public class GameManager : MonoBehaviour
 
         if (_uiNum + 1  < _gameUIs.Count)
         {
-            Debug.Log(_uiNum + " List Number");
+
             _uiNum++;
             _gameUIs[_uiNum].SetActive(true);
         }
 
         else
         {
-            Debug.Log("End");
             _uiNum = _gameUIs.Count;
             _uiBg.SetActive(false);
             _nxtBtn.SetActive(false);
             _playerUI.SetActive(true);
         }
 
-        Debug.Log("UI NUMBER: " + _uiNum);
 
         if (_uiNum >= 5)
         {
@@ -372,6 +370,7 @@ public class GameManager : MonoBehaviour
     #region Trial One
     public void TrialOneEnd()
     {
+        Debug.Log("Pressed the Alarm!");
         StartCoroutine(TrialOneEndFlow());
     }
 
