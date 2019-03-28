@@ -1101,6 +1101,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 82040155805099194, guid: da8f2105095a36746841c4a4577c70d0,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82040155805099194, guid: da8f2105095a36746841c4a4577c70d0,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da8f2105095a36746841c4a4577c70d0, type: 2}
   m_IsPrefabParent: 0
@@ -1725,7 +1735,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4251141076097156, guid: abcf2b4386c7a5546a8313a42bd69bcf, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.48
+      value: -7.35
       objectReference: {fileID: 0}
     - target: {fileID: 4251141076097156, guid: abcf2b4386c7a5546a8313a42bd69bcf, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1745,6 +1755,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4251141076097156, guid: abcf2b4386c7a5546a8313a42bd69bcf, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82668146607258920, guid: abcf2b4386c7a5546a8313a42bd69bcf,
+        type: 2}
+      propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3060,6 +3075,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012560919920, guid: 85a8865d1bf4a63478038fae23776de8,
     type: 2}
   m_PrefabInternal: {fileID: 825955584}
+--- !u!1 &840889735 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1345225300607664, guid: c35dccecea3db7246b77368a4a5480d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1475772518}
 --- !u!114 &841821213 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114794793256158088, guid: e8b0d792b22fa9948a281652f90f9ae9,
@@ -3233,8 +3253,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886851736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.06, y: -2.669, z: 0.056}
-  m_LocalScale: {x: 4.110633, y: 0.32214853, z: 1.7593225}
+  m_LocalPosition: {x: 6.502, y: -1.942, z: -0.552}
+  m_LocalScale: {x: 4.5038066, y: 1.7744094, z: 2.975342}
   m_Children: []
   m_Father: {fileID: 80217412}
   m_RootOrder: 1
@@ -4824,7 +4844,7 @@ GameObject:
   - component: {fileID: 1304615174}
   - component: {fileID: 1304615173}
   m_Layer: 5
-  m_Name: Fire Alarm Notify
+  m_Name: Fire Extinguisher Notice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4992,7 +5012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Go and Press the Fire Alarm
+  m_Text: Find the fire extinguisher box and get a fire extinguisher.
 --- !u!222 &1306413531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6783,6 +6803,101 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 198265244689801608, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198169756057293240, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198149330602402946, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198236416555863670, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198596840578385012, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198353413336993106, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198774116165962456, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198774116165962456, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: randomSeed
+      value: 1453812176
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995318923725580, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 9.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206783612177666, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272126528244514, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810989813490920, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239532029050272, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513552305675774, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213648155720268, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394357865313130, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198825050768404894, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198212530447646928, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198212530447646928, guid: c35dccecea3db7246b77368a4a5480d2,
+        type: 2}
+      propertyPath: randomSeed
+      value: 341661459
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741133343200174, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295438148987654, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c35dccecea3db7246b77368a4a5480d2, type: 2}
   m_IsPrefabParent: 0
@@ -7279,9 +7394,6 @@ MonoBehaviour:
   _fireAlarm: {fileID: 1311824182}
   _title: {fileID: 1237777048}
   _notification: {fileID: 1156622570}
-  _fireEffect: {fileID: 0}
-  _smokeEffect: {fileID: 825955586}
-  _sparkEffect: {fileID: 1768639860}
 --- !u!114 &1573920023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7557,6 +7669,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1597295300}
+--- !u!1 &1645387437 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1052701246201132, guid: c35dccecea3db7246b77368a4a5480d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1475772518}
 --- !u!1 &1697798542 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 2}
@@ -7638,6 +7755,7 @@ GameObject:
   - component: {fileID: 1739343446}
   - component: {fileID: 1739343445}
   - component: {fileID: 1739343449}
+  - component: {fileID: 1739343450}
   m_Layer: 0
   m_Name: First
   m_TagString: Quiz1
@@ -7723,11 +7841,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questionUI: {fileID: 2047972877}
---- !u!1 &1768639860 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1075153163}
+--- !u!114 &1739343450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739343444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925725f3874344b42bf6285b201d486b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1768639861 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000014129045996, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
@@ -8920,6 +9044,16 @@ Prefab:
       propertyPath: fireExtinguisher
       value: 
       objectReference: {fileID: 1943816458}
+    - target: {fileID: 114794793256158088, guid: e8b0d792b22fa9948a281652f90f9ae9,
+        type: 2}
+      propertyPath: fireEffectsParent
+      value: 
+      objectReference: {fileID: 840889735}
+    - target: {fileID: 114794793256158088, guid: e8b0d792b22fa9948a281652f90f9ae9,
+        type: 2}
+      propertyPath: explosionEffectsParent
+      value: 
+      objectReference: {fileID: 1645387437}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8b0d792b22fa9948a281652f90f9ae9, type: 2}
   m_IsPrefabParent: 0
