@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     private int _uiNum = 0;
     public GameObject endTrialUI;
     public GameObject runNoticeUI;
+    public GameObject extinguisherAreaNotice;
     //STAGE 1 OBJECTS
 
 
@@ -140,7 +141,7 @@ public class GameManager : MonoBehaviour
         _gameUIs[_uiNum].SetActive(false);
         
 
-        Debug.Log(_gameUIs.Count);
+        //Debug.Log(_gameUIs.Count);
 
         if (_uiNum + 1  < _gameUIs.Count)
         {
@@ -238,6 +239,21 @@ public class GameManager : MonoBehaviour
     public void ActivateAlarm()
     {
         fireAlarm.Play();
+    }
+
+    public void StopExplosionSoundEffect()
+    {
+        explosionSound.Stop();
+    }
+
+    public void StopBurningSoundEffect()
+    {
+        burningSound.Stop();
+    }
+
+    public void StopAlarmSound()
+    {
+        fireAlarm.Stop();
     }
 
     #endregion
@@ -393,15 +409,22 @@ public class GameManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(7);
-        
-        for(int x = 0; x<= fireParticles.Count; x++)
-        {
+        int y = fireParticles.Count;
+        for (int x = 0; x< fireParticles.Count; x++)
+        {   
+            //Debug.Log("Fire turning off in: " + y--);
+            //Debug.Log(x + "x value");
             fireParticles[x].SetActive(false);
             yield return new WaitForSeconds(1);
         }
 
 
-        EndTrialMessage().SetActive(true);
+      
+        StopBurningSoundEffect();
+        //Debug.Log("Stop burning sound effect");
+        ExtinguisherEffectGameObject().SetActive(false);
+        endTrialUI.SetActive(true);
+        //Debug.Log("End trial UI Show");
         yield return new WaitForSeconds(2);
         DisablePlayerWalk();
         //EnablePlayerWalk();

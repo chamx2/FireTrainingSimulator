@@ -6,14 +6,17 @@ public class ExtinguisherAreaTrigger : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+
         GameManager.Instance.ExtinguisherEffectGameObject().SetActive(true);
+        GameManager.Instance.extinguisherAreaNotice.SetActive(false);
         GameManager.Instance.DisablePlayerWalk();
         GameManager.Instance.TrialThreeFlow();
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        GameManager.Instance.ExtinguisherEffectGameObject().SetActive(false);
+        //GameManager.Instance.ExtinguisherEffectGameObject().SetActive(false);
         //GameManager.Instance.extinguisherStatus = false;
         GameManager.Instance.EnablePlayerWalk();
     }
